@@ -4,9 +4,29 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact Us - Umesh Khatiwada | DevOps Professional & Cloud Architect</title>
-  <meta name="description" content="Get in touch with Umesh Khatiwada, a DevOps Professional and Cloud Architect. Contact us for inquiries about cloud solutions, DevOps services, consulting, and more.">
-  <meta name="keywords" content="Contact Umesh Khatiwada, DevOps Professional, Cloud Architect, Cloud Solutions, DevOps Services, Consulting, IT Support, Get in Touch">
+  <title>Contact Umesh Khatiwada - DevOps Expert & Cloud Architect</title>
+  <meta name="description" content="Contact Umesh Khatiwada, a DevOps Professional and Cloud Architect, for cloud solutions, DevOps services, and consulting. Reach out for collaborations or inquiries.">
+  <meta name="keywords" content="Contact Umesh Khatiwada, DevOps Expert, Cloud Architect, Cloud Solutions, DevOps Services, Consulting, IT Support, Get in Touch">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Umesh Khatiwada",
+    "url": "https://umeshkhatiwada.com/contact.html",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kathmandu",
+      "addressCountry": "Nepal"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+977 9845 XX4055",
+      "contactType": "customer service"
+    }
+  }
+  </script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -27,13 +47,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link rel="canonical" href="https://umeshkhatiwada.com/contact.html">
 </head>
 
 <body class="contact-page">
@@ -42,10 +56,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="DevOps" style="width: 200px; height: 200px;">
-
-        <!-- <h1 class="sitename">DevOps</h1> -->
+        <img src="assets/img/logo.png" alt="Umesh Khatiwada Logo" style="width: 200px; height: 200px;">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -55,8 +66,7 @@
           <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li ><a href="https://blog.umeshkhatiwada.com.np"><span>Blog</span> 
-          </li>
+          <li><a href="https://blog.umeshkhatiwada.com.np"><span>Blog</span></a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -73,8 +83,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Contact</h1>
-              <p class="mb-0" > To discuss future projects or partnerships, or if you have any questions about my work as a cloud engineer, please visit my personal website. Let's explore the possibilities of collaborating to achieve your cloud infrastructure goals.</p>
+              <h1>Contact Umesh Khatiwada</h1>
+              <p class="mb-0">To discuss future projects or partnerships, or if you have any questions about my work as a cloud engineer, please visit my personal website. Let's explore the possibilities of collaborating to achieve your cloud infrastructure goals.</p>
             </div>
           </div>
         </div>
@@ -83,6 +93,7 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
             <li class="current">Contact</li>
           </ol>
         </div>
@@ -121,7 +132,7 @@
               <i class="icon bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>contact.khatiwada@gmail.com</p>
+                <p><a href="mailto:contact.khatiwada@gmail.com">contact.khatiwada@gmail.com</a></p>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -132,16 +143,16 @@
               <div>
                 <h3>Social Profiles</h3>
                 <div class="social-links d-flex justify-content-center">
-                  <a href="https://x.com/The_khatiwada">
+                  <a href="https://x.com/The_khatiwada" aria-label="Twitter">
                     <i class="bi bi-twitter-x"></i>
                   </a>
-                  <a href="https://www.instagram.com/umesh__khatiwada/">
+                  <a href="https://www.instagram.com/umesh__khatiwada/" aria-label="Instagram">
                     <i class="bi bi-instagram"></i>
                   </a>
-                  <a href="https://join.skype.com/invite/u9o9zpFsPsNU">
+                  <a href="https://join.skype.com/invite/u9o9zpFsPsNU" aria-label="Skype">
                     <i class="bi bi-skype"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/umesh-khatiwada/">
+                  <a href="https://www.linkedin.com/in/umesh-khatiwada/" aria-label="LinkedIn">
                     <i class="bi bi-linkedin"></i>
                   </a>
                 </div>
@@ -155,19 +166,23 @@
           <div class="row gy-4">
 
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" aria-label="Your Name" required>
             </div>
 
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            <div class="col-md-6">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" aria-label="Your Email" required>
             </div>
 
             <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" aria-label="Subject" required>
             </div>
 
             <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" aria-label="Message" required></textarea>
             </div>
 
             <div class="col-md-12 text-center">
@@ -192,22 +207,22 @@
       <h3 class="sitename">Personal</h3>
       <p>My name is Umesh Khatiwada, and I am a versatile technology professional specializing in DevOps, engineering, solution architecture, and cloud architecture. Currently based in Hetauda-16, Nepal, I hold a Bachelor of Science in Computer Science from Tribhuwan University. My career is driven by a deep passion for web development and a strong commitment to exploring and integrating cutting-edge technologies. In addition to my core roles, I am dedicated to studying human-computer interfaces and the psychology of human-computer interaction in my free time. My enthusiasm for continuous learning and innovation fuels my efforts to advance both my own skills and the development community as a whole.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://x.com/The_khatiwada">
+        <a href="https://x.com/The_khatiwada" aria-label="Twitter">
           <i class="bi bi-twitter-x"></i>
         </a>
-        <a href="https://www.instagram.com/umesh__khatiwada/">
+        <a href="https://www.instagram.com/umesh__khatiwada/" aria-label="Instagram">
           <i class="bi bi-instagram"></i>
         </a>
-        <a href="https://join.skype.com/invite/u9o9zpFsPsNU">
+        <a href="https://join.skype.com/invite/u9o9zpFsPsNU" aria-label="Skype">
           <i class="bi bi-skype"></i>
         </a>
-        <a href="https://www.linkedin.com/in/umesh-khatiwada/">
+        <a href="https://www.linkedin.com/in/umesh-khatiwada/" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
         </a>
-      </div>      
+      </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright © 2024</span> <strong class="px-1 sitename">Umesh khatiwada </strong> <span>All Rights Reserved</span>
+          <span>Copyright © 2024</span> <strong class="px-1 sitename">Umesh Khatiwada</strong> <span>All Rights Reserved</span>
         </div>
       </div>
     </div>
