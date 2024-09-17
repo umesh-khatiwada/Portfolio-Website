@@ -48,6 +48,11 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -167,39 +172,41 @@
 
         </div>
 
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-          <div class="row gy-4">
+        <!-- Contact Form Section -->
+        <section id="contact-form-section" class="contact-form section">
+          <div class="container">
+            <form id="contact-form" class="php-email-form" action="javascript:void(0);" method="post">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
 
-            <div class="col-md-6">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" aria-label="Your Name" required>
-            </div>
+                <div class="col-md-6">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
 
-            <div class="col-md-6">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" aria-label="Your Email" required>
-            </div>
+                <div class="col-md-12">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                </div>
 
-            <div class="col-md-12">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" aria-label="Subject" required>
-            </div>
+                <div class="col-md-12">
+                  <label for="message">Message</label>
+                  <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
 
-            <div class="col-md-12">
-              <label for="message">Message</label>
-              <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" aria-label="Message" required></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
-            </div>
-
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                  <div class="loading" style="display:none;">Loading</div>
+                  <div class="error-message" style="display:none;color:red;">Something went wrong. Please try again.</div>
+                  <div class="sent-message" style="display:none;color:green;">Your message has been sent. Thank you!</div>
+                </div>
+              </div>
+            </form>
           </div>
-        </form><!-- End Contact Form -->
+        </section>
 
       </div>
 
@@ -254,6 +261,55 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- jQuery AJAX Script -->
+  <script>
+    $(document).ready(function() {
+      $("#contact-form").on("submit", function(e) {
+        e.preventDefault(); // Prevent form from submitting the normal way
+  
+        // Show loading message
+        $(".loading").show();
+        
+        // Hide previous messages
+        $(".error-message").hide();
+        $(".sent-message").hide();
+  
+        // Gather form data
+        const formData = {
+          "data": {
+            "Name": $("#name").val(),
+            "Email": $("#email").val(),
+            "Subject": $("#subject").val(),
+            "Message": $("#message").val()
+          }
+        };
+  
+        // AJAX POST request
+        $.ajax({
+          url: "https://api-blog.umeshkhatiwada.com.np/api/contacts/",
+          type: "POST",
+          headers: {
+            "Authorization": "Bearer 444504b41401f1dfab1f792ec9b846576293e340696cebd7a25926aa96b727318ed20d86124903c4e0187d72f70453a8b530ee315dd2a9fc923b6eeb53715271d10fef98a60549943932ba7bf359e0a8efe34c10bd3edef8e8a0d10d53e9203b1a53b8b51d7c3e1d93062868cf99fa6a8905b8bfba4a0ee4006b226989a539c5"
+          },
+          contentType: "application/json",
+          data: JSON.stringify(formData),
+          success: function(response) {
+            // Hide loading and show success message
+            $(".loading").hide();
+            $(".sent-message").show();
+            // Clear the form fields
+            $("#contact-form")[0].reset();
+          },
+          error: function(xhr, status, error) {
+            // Hide loading and show error message
+            $(".loading").hide();
+            $(".error-message").hide();
+          }
+        });
+      });
+    });
+  </script>
+  
 </body>
 
 </html>
