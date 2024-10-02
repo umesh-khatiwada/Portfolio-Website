@@ -27,8 +27,6 @@
   <link rel="icon" href="./favicon.ico" sizes="48x48" type="image/png">
   <link rel="apple-touch-icon" href="https://umeshkhatiwada.com.np/assets/img/favicon-32x32.png">
   <link rel="icon" href="favicon.ico" sizes="192x192" type="image/png">
-  <meta name="twitter:image" content="./favicon.ico">
-  <meta property="og:image" content="./favicon.ico">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -45,13 +43,11 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <!-- Add Font Awesome for tech icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+  </style>
 </head>
 
 <body class="index-page">
@@ -60,10 +56,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="Umesh Khatiwada - DevOps Professional Logo" style="width: 200px; height: 200px;">
-
-        <!-- <h1 class="sitename">DevOps</h1> -->
+        <img src="assets/img/profile.png" alt="Umesh Khatiwada - DevOps Professional Logo" style="width: 80px; height: 120px;">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -85,8 +78,7 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <img src="assets/img/hero-bg1.png" alt="Hero Background Image" data-aos="fade-in">
+    <section id="hero" class="hero section">
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
         <h1>Umesh Khatiwada</h1>
         <p>I'm 
@@ -95,7 +87,15 @@
           </span>
           <span class="typed-cursor typed-cursor--blink"></span>
         </p>
-        <div class="social-links d-flex justify-content-center">
+        <div class="tech-icons">
+          <i class="fab fa-java tech-icon java" title="Java"></i>
+          <i class="fab fa-aws tech-icon aws" title="AWS"></i>
+          <i class="fas fa-dharmachakra tech-icon kubernetes" title="Kubernetes"></i>
+          <i class="fab fa-docker tech-icon docker" title="Docker"></i>
+          <i class="fab fa-google tech-icon gcp" title="Google Cloud Platform"></i>
+          <i class="fas fa-stream tech-icon pipeline" title="CI/CD Pipeline"></i>
+        </div>
+        <div class="social-links d-flex justify-content-center mt-4">
           <a href="https://x.com/The_khatiwada" aria-label="Twitter">
             <i class="bi bi-twitter"></i>
           </a>
@@ -108,6 +108,24 @@
           <a href="https://www.linkedin.com/in/umesh-khatiwada/" aria-label="LinkedIn">
             <i class="bi bi-linkedin"></i>
           </a>
+        </div>
+        <!-- Updated DevOps animation container -->
+        <div class="devops-container">
+          <div class="pipeline"></div>
+          <i class="fas fa-cog gear gear-1"></i>
+          <i class="fas fa-cog gear gear-2"></i>
+          <i class="fas fa-cloud cloud cloud-1"></i>
+          <i class="fas fa-cloud cloud cloud-2"></i>
+          <i class="fas fa-code code code-1"></i>
+          <i class="fas fa-code code code-2"></i>
+          <span class="devops-term term-1">Continuous Integration</span>
+          <span class="devops-term term-2">Automation</span>
+          <span class="devops-term term-3">Infrastructure as Code</span>
+          <span class="devops-term term-4">Microservices</span>
+          <!-- New DevOps background elements -->
+          <i class="fab fa-github github-actions" title="GitHub Actions"></i>
+          <i class="fab fa-jenkins jenkins" title="Jenkins"></i>
+          <i class="fas fa-project-diagram pipeline-icon" title="Pipeline"></i>
         </div>
       </div>
     </section><!-- /Hero Section -->
@@ -160,6 +178,49 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Icon Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const techIcons = document.querySelectorAll('.tech-icon');
+      const techIconsContainer = document.querySelector('.tech-icons');
+
+      function getRandomPosition(element) {
+        const x = Math.random() * (techIconsContainer.offsetWidth - element.clientWidth);
+        const y = Math.random() * (techIconsContainer.offsetHeight - element.clientHeight);
+        return [x, y];
+      }
+
+      techIcons.forEach(icon => {
+        const [x, y] = getRandomPosition(icon);
+        icon.style.left = `${x}px`;
+        icon.style.top = `${y}px`;
+        icon.classList.add('floating');
+      });
+
+      techIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+          this.style.transition = 'transform 0.5s ease-in-out';
+          this.style.transform = 'scale(1.5) rotate(360deg)';
+          setTimeout(() => {
+            this.style.transform = 'scale(1) rotate(0deg)';
+          }, 500);
+        });
+      });
+
+      function moveIcons() {
+        techIcons.forEach(icon => {
+          const [x, y] = getRandomPosition(icon);
+          icon.style.transition = 'left 3s ease-in-out, top 3s ease-in-out';
+          icon.style.left = `${x}px`;
+          icon.style.top = `${y}px`;
+        });
+      }
+
+      moveIcons();
+      setInterval(moveIcons, 5000);
+    });
+  </script>
 
 </body>
 
