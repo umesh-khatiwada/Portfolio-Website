@@ -1467,7 +1467,7 @@ section,
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #3a6073);
+  background: linear-gradient(-45deg, #234d61, #2e5466, #0a1b23, #2e5466);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
 }
