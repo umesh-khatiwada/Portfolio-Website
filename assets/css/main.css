@@ -1,4 +1,3 @@
-
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
@@ -1662,4 +1661,109 @@ section,
   .devops-term {
     font-size: 14px;
   }
+}
+
+#matrix-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.terminal-window {
+  background: rgba(16, 16, 16, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.terminal-header {
+  background: #2d2d2d;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-title {
+  color: #fff;
+  margin-left: 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.terminal-content {
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+  color: #00ff00;
+}
+
+.terminal-line {
+  margin: 10px 0;
+  display: flex;
+}
+
+.terminal-prompt {
+  color: #00ff00;
+  margin-right: 10px;
+}
+
+.terminal-text {
+  color: #fff;
+}
+
+.terminal-output {
+  color: #00ff00;
+  margin: 5px 0 15px 20px;
+  line-height: 1.4;
+}
+
+/* Blinking cursor */
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background: #00ff00;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Update hero section for terminal theme */
+.hero {
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1, .hero p {
+  color: #00ff00;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
