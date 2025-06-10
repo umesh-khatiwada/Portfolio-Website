@@ -1,11 +1,18 @@
 // Matrix rain effect
 const canvas = document.getElementById('matrix-bg');
 const ctx = canvas.getContext('2d');
+let animationFrameId;
+let isRunning = true;
+const isMobile = window.innerWidth <= 768;
 
-// Set canvas size
+// Set canvas size with mobile optimization
 function setCanvasSize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const scale = isMobile ? window.devicePixelRatio : 1;
+    canvas.width = window.innerWidth * scale;
+    canvas.height = window.innerHeight * scale;
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight + 'px';
+    ctx.scale(scale, scale);
 }
 
 setCanvasSize();

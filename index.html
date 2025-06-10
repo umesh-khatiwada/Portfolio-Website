@@ -88,16 +88,16 @@
     <!-- Hero Section -->
     <canvas id="matrix-bg"></canvas>
     <section id="hero" class="hero section">
-      <div class="terminal-window">
+      <div class="terminal-window" role="main" aria-label="Terminal Interface">
         <div class="terminal-header">
-          <div class="terminal-dots">
+          <div class="terminal-dots" aria-hidden="true">
             <div class="dot red"></div>
             <div class="dot yellow"></div>
             <div class="dot green"></div>
           </div>
-          <div class="terminal-title">umesh@devops:~</div>
+          <div class="terminal-title" aria-label="Terminal Title">umesh@devops:~</div>
         </div>
-        <div class="terminal-content">
+        <div class="terminal-content" tabindex="0">
           <div class="terminal-line">
             <span class="terminal-prompt">$ </span>
             <span class="terminal-text">whoami</span>
@@ -215,10 +215,19 @@
     document.addEventListener('DOMContentLoaded', function() {
       const techIcons = document.querySelectorAll('.tech-icon');
       const techIconsContainer = document.querySelector('.tech-icons');
+      let isMobile = window.innerWidth <= 768;
+      
+      // Update mobile status on resize
+      window.addEventListener('resize', () => {
+        isMobile = window.innerWidth <= 768;
+        adjustAnimationsForDevice();
+      });
 
       function getRandomPosition(element) {
-        const x = Math.random() * (techIconsContainer.offsetWidth - element.clientWidth);
-        const y = Math.random() * (techIconsContainer.offsetHeight - element.clientHeight);
+        const containerWidth = techIconsContainer.offsetWidth;
+        const containerHeight = isMobile ? 120 : techIconsContainer.offsetHeight;
+        const x = Math.random() * (containerWidth - element.clientWidth);
+        const y = Math.random() * (containerHeight - element.clientHeight);
         return [x, y];
       }
 
