@@ -1577,87 +1577,11 @@ section,
   animation: float 5s ease-in-out infinite;
 }
 
-/* Updated DevOps-themed animations */
-@keyframes pipeline {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
 
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 
-@keyframes scale {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-}
 
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
-}
 
-.devops-container {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-  margin-top: 30px;
-}
 
-.pipeline {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff9900, #326ce5, #0db7ed, #4285f4);
-  animation: pipeline 15s linear infinite;
-}
-
-.gear {
-  position: absolute;
-  font-size: 40px;
-  color: #ffffff;
-  animation: rotate 20s linear infinite, pulse 3s ease-in-out infinite;
-}
-
-.gear-1 { top: 20px; left: 20%; animation-duration: 25s; }
-.gear-2 { bottom: 20px; right: 20%; animation-duration: 20s; animation-direction: reverse; }
-
-.cloud {
-  position: absolute;
-  font-size: 50px;
-  color: #ffffff;
-  animation: scale 5s ease-in-out infinite, float 8s ease-in-out infinite;
-}
-
-.cloud-1 { top: 30px; right: 30%; animation-delay: 0s, 1s; }
-.cloud-2 { bottom: 30px; left: 30%; animation-delay: 2s, 3s; }
-
-.code {
-  position: absolute;
-  font-size: 30px;
-  color: #40e0d0;
-  animation: float 6s ease-in-out infinite, pulse 4s ease-in-out infinite;
-}
-
-.code-1 { top: 50px; left: 40%; animation-delay: 1s, 0s; }
-.code-2 { bottom: 50px; right: 40%; animation-delay: 3s, 2s; }
-
-/* DevOps terms */
-.devops-term {
-  position: absolute;
-  font-size: 18px;
-  color: #ffffff;
-  opacity: 0.7;
-  animation: float 7s ease-in-out infinite, pulse 5s ease-in-out infinite;
-}
-
-.term-1 { top: 10%; left: 10%; animation-delay: 0s, 1s; }
-.term-2 { top: 20%; right: 15%; animation-delay: 2s, 3s; }
-.term-3 { bottom: 15%; left: 20%; animation-delay: 1s, 2s; }
-.term-4 { bottom: 25%; right: 10%; animation-delay: 3s, 0s; }
 
 /* New DevOps background elements */
 .github-actions, .jenkins, .pipeline-icon {
@@ -1669,20 +1593,7 @@ section,
 
 .github-actions { top: 15%; left: 5%; animation-delay: 1s, 2s; }
 .jenkins { bottom: 20%; right: 5%; animation-delay: 2s, 3s; }
-.pipeline-icon { top: 40%; right: 15%; animation-delay: 3s, 1s; }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .devops-container {
-    height: 150px;
-  }
-  .gear, .cloud, .code, .github-actions, .jenkins, .pipeline-icon {
-    font-size: 24px;
-  }
-  .devops-term {
-    font-size: 12px;
-  }
-}
 
 #matrix-bg {
   position: fixed;
@@ -1839,18 +1750,6 @@ section,
 
   .tech-icon {
     font-size: 1.8em;
-  }
-
-  .devops-container {
-    height: 120px;
-  }
-
-  .devops-term {
-    font-size: 12px;
-  }
-
-  .gear, .cloud, .code {
-    font-size: 20px;
   }
 
   .social-links {
