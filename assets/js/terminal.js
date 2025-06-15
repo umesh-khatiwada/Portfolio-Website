@@ -1,13 +1,24 @@
 // Terminal animation
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Terminal script initialized');
+    
+    // Get terminal element
+    const terminalContent = document.querySelector('.terminal-content');
+    if (!terminalContent) {
+        console.error('Terminal content element not found');
+        return;
+    }
+    
+    // Clear any existing content
+    terminalContent.innerHTML = '';
+    
+    // Define commands
     const commands = [
         { cmd: 'whoami', output: 'Umesh Khatiwada' },
-        { cmd: 'ls skills/', output: '* DevOps\n* Cloud Architecture\n* Infrastructure as Code\n* CI/CD\n* Container Orchestration' },
+        { cmd: 'ls -l skills/', output: 'drwxr-xr-x DevOps\ndrwxr-xr-x Cloud-Architecture\ndrwxr-xr-x Infrastructure-as-Code\ndrwxr-xr-x CI-CD-Pipeline\ndrwxr-xr-x Container-Orchestration' },
         { cmd: 'cat experience.txt', output: '3.5+ years of experience in delivering impactful DevOps solutions\nSpecialized in AWS, Kubernetes, Docker, and Automation' },
         { cmd: 'docker ps', output: 'CONTAINER ID   IMAGE          STATUS\nab123456789   nginx:latest   Up 24 hours\ncd987654321   redis:alpine   Up 15 days' }
     ];
-
-    const terminalContent = document.querySelector('.terminal-content');
 
     function typeCommand(text, element) {
         return new Promise(resolve => {
