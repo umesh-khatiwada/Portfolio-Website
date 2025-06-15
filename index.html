@@ -88,16 +88,68 @@
     <!-- Hero Section -->
     <canvas id="matrix-bg"></canvas>
     <section id="hero" class="hero section">
-      <div class="terminal-window" role="main" aria-label="Terminal Interface">
-        <div class="terminal-header">
-          <div class="terminal-dots" aria-hidden="true">
-            <div class="dot red"></div>
-            <div class="dot yellow"></div>
-            <div class="dot green"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left side: DevOps Pipeline Visualization -->
+          <div class="col-lg-7 devops-pipeline">
+            <div class="pipeline-visualization">
+              <h2 class="text-gradient">DevOps Infrastructure</h2>
+              <div class="pipeline-stages">
+                <div class="stage">
+                  <i class="fas fa-code"></i>
+                  <span>Code</span>
+                  <div class="stage-details">
+                    <p>Git • GitHub • GitLab</p>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-right flow-arrow"></i>
+                <div class="stage">
+                  <i class="fas fa-cogs"></i>
+                  <span>Build</span>
+                  <div class="stage-details">
+                    <p>Jenkins • Docker • Maven</p>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-right flow-arrow"></i>
+                <div class="stage">
+                  <i class="fas fa-vial"></i>
+                  <span>Test</span>
+                  <div class="stage-details">
+                    <p>JUnit • Selenium • SonarQube</p>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-right flow-arrow"></i>
+                <div class="stage">
+                  <i class="fas fa-rocket"></i>
+                  <span>Deploy</span>
+                  <div class="stage-details">
+                    <p>Kubernetes • AWS • Azure</p>
+                  </div>
+                </div>
+                <i class="fas fa-arrow-right flow-arrow"></i>
+                <div class="stage">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Monitor</span>
+                  <div class="stage-details">
+                    <p>Prometheus • Grafana • ELK</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="terminal-title" aria-label="Terminal Title">umesh@devops:~</div>
-        </div>
-        <div class="terminal-content" tabindex="0">
+          
+          <!-- Right side: Terminal Window -->
+          <div class="col-lg-5">
+            <div class="terminal-window" role="main" aria-label="Terminal Interface">
+              <div class="terminal-header">
+                <div class="terminal-dots" aria-hidden="true">
+                  <div class="dot red"></div>
+                  <div class="dot yellow"></div>
+                  <div class="dot green"></div>
+                </div>
+                <div class="terminal-title" aria-label="Terminal Title">umesh@devops:~</div>
+              </div>
+              <div class="terminal-content" tabindex="0">
           <div class="terminal-line">
             <span class="terminal-prompt">$ </span>
             <span class="terminal-text">whoami</span>
@@ -215,13 +267,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       const techIcons = document.querySelectorAll('.tech-icon');
       const techIconsContainer = document.querySelector('.tech-icons');
-      let isMobile = window.innerWidth <= 768;
-      
-      // Update mobile status on resize
-      window.addEventListener('resize', () => {
-        isMobile = window.innerWidth <= 768;
-        adjustAnimationsForDevice();
-      });
+      const isMobile = window.innerWidth <= 768;
 
       function getRandomPosition(element) {
         const containerWidth = techIconsContainer.offsetWidth;
@@ -231,6 +277,7 @@
         return [x, y];
       }
 
+      // Position icons once on load
       techIcons.forEach(icon => {
         const [x, y] = getRandomPosition(icon);
         icon.style.left = `${x}px`;
@@ -238,27 +285,19 @@
         icon.classList.add('floating');
       });
 
+      // Click animation
       techIcons.forEach(icon => {
         icon.addEventListener('click', function() {
-          this.style.transition = 'transform 0.5s ease-in-out';
-          this.style.transform = 'scale(1.5) rotate(360deg)';
-          setTimeout(() => {
-            this.style.transform = 'scale(1) rotate(0deg)';
-          }, 500);
+          if (!this.classList.contains('animating')) {
+            this.classList.add('animating');
+            this.style.transform = 'scale(1.5) rotate(360deg)';
+            setTimeout(() => {
+              this.style.transform = 'scale(1) rotate(0deg)';
+              this.classList.remove('animating');
+            }, 500);
+          }
         });
       });
-
-      function moveIcons() {
-        techIcons.forEach(icon => {
-          const [x, y] = getRandomPosition(icon);
-          icon.style.transition = 'left 3s ease-in-out, top 3s ease-in-out';
-          icon.style.left = `${x}px`;
-          icon.style.top = `${y}px`;
-        });
-      }
-
-      moveIcons();
-      setInterval(moveIcons, 5000);
     });
   </script>
 

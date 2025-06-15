@@ -7,59 +7,57 @@ document.addEventListener('DOMContentLoaded', function() {
         { cmd: 'docker ps', output: 'CONTAINER ID   IMAGE          STATUS\nab123456789   nginx:latest   Up 24 hours\ncd987654321   redis:alpine   Up 15 days' }
     ];
 
-    let currentCommand = 0;
     const terminalContent = document.querySelector('.terminal-content');
 
-    function typeCommand(text, element, callback) {
-        let i = 0;
-        element.textContent = '';
-        const interval = setInterval(() => {
-            if (i < text.length) {
-                element.textContent += text[i];
-                i++;
-            } else {
-                clearInterval(interval);
-                if (callback) callback();
-            }
-        }, 50);
+    function typeCommand(text, element) {
+        return new Promise(resolve => {
+            let i = 0;
+            element.textContent = '';
+            const interval = setInterval(() => {
+                if (i < text.length) {
+                    element.textContent += text[i];
+                    i++;
+                } else {
+                    clearInterval(interval);
+                    resolve();
+                }
+            }, 50);
+        });
     }
 
     function showOutput(text) {
         const output = document.createElement('div');
         output.className = 'terminal-output';
         output.innerHTML = text;
-        output.style.opacity = '0';
         terminalContent.appendChild(output);
-        
-        setTimeout(() => {
-            output.style.transition = 'opacity 0.5s';
-            output.style.opacity = '1';
-        }, 50);
-    }
-
-    function nextCommand() {
-        if (currentCommand >= commands.length) {
-            currentCommand = 0;
-        }
-
-        const cmd = commands[currentCommand];
-        
-        const line = document.createElement('div');
-        line.className = 'terminal-line';
-        line.innerHTML = '<span class="terminal-prompt">$ </span><span class="terminal-text"></span>';
-        terminalContent.appendChild(line);
-
-        typeCommand(cmd.cmd, line.querySelector('.terminal-text'), () => {
-            setTimeout(() => {
-                showOutput(cmd.output);
-                setTimeout(() => {
-                    currentCommand++;
-                    nextCommand();
-                }, 2000);
-            }, 500);
+        return new Promise(resolve => {
+            requestAnimationFrame(() => {
+                output.style.opacity = '1';
+                setTimeout(resolve, 500);
+            });
         });
     }
 
-    // Start the command sequence
-    nextCommand();
+    async function displayCommands() {
+        for (const cmd of commands) {
+            const line = document.createElement('div');
+            line.className = 'terminal-line';
+            line.innerHTML = '<span class="terminal-prompt">$ </span><span class="terminal-text"></span>';
+            terminalContent.appendChild(line);
+
+            await typeCommand(cmd.cmd, line.querySelector('.terminal-text'));
+            await new Promise(resolve => setTimeout(resolve, 500));
+            await showOutput(cmd.output);
+            await new Promise(resolve => setTimeout(resolve, 1000));
+        }
+    }
+
+    // Run the sequence once
+    displayCommands().then(() => {
+        // Add final cursor after all commands are done
+        const finalPrompt = document.createElement('div');
+        finalPrompt.className = 'terminal-line';
+        finalPrompt.innerHTML = '<span class="terminal-prompt">$ </span><span class="cursor"></span>';
+        terminalContent.appendChild(finalPrompt);
+    });
 });
