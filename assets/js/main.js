@@ -61,12 +61,26 @@
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add animation delay to loading text
+    const loadingText = document.querySelectorAll('.loading-text span');
+    loadingText.forEach((span, index) => {
+      span.style.setProperty('--i', index);
     });
-  }
+
+    // Hide preloader after content loads
+    window.addEventListener('load', () => {
+      const preloader = document.querySelector('#preloader');
+      if (preloader) {
+        setTimeout(() => {
+          preloader.style.opacity = '0';
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 500);
+        }, 1500);
+      }
+    });
+  });
 
   /**
    * Scroll top button
