@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Get terminal element
     const terminalContent = document.querySelector('.terminal-content');
+    
+    // Force scroll position to stay at 0
+    terminalContent.addEventListener('scroll', () => {
+        terminalContent.scrollTop = 1;
+    });
+
+    // Prevent scroll events
+    terminalContent.addEventListener('wheel', (e) => {
+        e.preventDefault();
+    });
+
     if (!terminalContent) {
         console.error('Terminal content element not found');
         return;

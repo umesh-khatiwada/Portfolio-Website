@@ -1,0 +1,68 @@
+.advanced-cli {
+    transition: all 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.cli-maximized {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 9999;
+    margin: 0 !important;
+    padding: 20px;
+    background: #000000 !important;
+    border-radius: 0;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+    overflow: hidden;
+}
+
+.cli-maximized .cli-container {
+    height: calc(100vh - 60px);
+    overflow: hidden;
+}
+
+.cli-maximized .cli-output {
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #00ff00 #000000;
+}
+
+.cli-maximized .cli-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cli-maximized .cli-output::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+.cli-maximized .cli-output::-webkit-scrollbar-thumb {
+    background-color: #00ff00;
+    border-radius: 4px;
+}
+
+.maximize-btn {
+    background: none;
+    border: none;
+    color: #00ff00;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    transition: all 0.2s ease;
+}
+
+.maximize-btn:hover {
+    transform: scale(1.1);
+    color: #00ff00;
+}
+
+.maximize-btn i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.cli-maximized .maximize-btn i {
+    transform: rotate(180deg);
+}
