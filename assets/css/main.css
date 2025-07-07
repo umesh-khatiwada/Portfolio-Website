@@ -420,6 +420,11 @@ h6 {
   }
 }
 
+/* Add spacing below nav for all screens */
+.navmenu {
+  margin-bottom: 32px;
+}
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -2251,4 +2256,111 @@ section,
     font-size: 14px;
     width: 100%;
     outline: none;
+}
+
+/* Add responsive styles */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 0;
+    min-height: unset;
+  }
+  .devops-pipeline {
+    margin-bottom: 32px;
+  }
+  .terminal-window {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 300px;
+  }
+  .pipeline-visualization {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  .pipeline-stages {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .stage {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .flow-arrow {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+}
+
+/* Responsive: Make social links and tech icons wrap and center */
+@media (max-width: 768px) {
+  .social-links {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .tech-icons {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+    height: auto;
+  }
+  .tech-icon {
+    position: static;
+    font-size: 1.8em;
+    margin: 5px;
+  }
+  .terminal-window {
+    margin: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .terminal-content {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .hero {
+    padding-top: 60px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .pipeline-visualization {
+    padding: 10px;
+  }
+  .stage {
+    min-width: 0;
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+/* Responsive: Adjust container and row paddings */
+@media (max-width: 576px) {
+  .container,
+  .container-fluid {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .hero {
+    padding: 20px 0;
+  }
+  .pipeline-visualization {
+    padding: 5px;
+  }
+  .stage {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive: Adjust navmenu for mobile */
+@media (max-width: 1199px) {
+  .navmenu {
+    margin-bottom: 24px;
+  }
 }
