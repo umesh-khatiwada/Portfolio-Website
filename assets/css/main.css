@@ -2364,3 +2364,10 @@ section,
     margin-bottom: 24px;
   }
 }
+
+/* Hide pipeline-visualization on mobile */
+@media (max-width: 767.98px) {
+  .pipeline-visualization {
+    display: none !important;
+  }
+}
