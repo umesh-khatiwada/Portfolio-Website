@@ -437,6 +437,30 @@ h6 {
   position: relative;
 }
 
+/* Footer background and text color for better visibility on light backgrounds */
+.footer {
+  background: #111 !important;
+  color: #fafafa !important;
+}
+
+.footer h3,
+.footer p,
+.footer .copyright,
+.footer .credits,
+.footer .social-links a {
+  color: #fafafa !important;
+}
+
+.footer .social-links a {
+  background: #232323 !important;
+  color: #fafafa !important;
+}
+
+.footer .social-links a:hover {
+  background: #00ffae !important;
+  color: #111 !important;
+}
+
 .footer h3 {
   font-size: 36px;
   font-weight: 700;
