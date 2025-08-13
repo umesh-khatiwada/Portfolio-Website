@@ -8,43 +8,43 @@
 
     <item>
       <title>GET /projects</title>
-      <description>Retrieve all projects accessible to the user. Returns a list of projects.</description>
+      <description>Retrieve all projects accessible to the user. Returns a list of projects. Suggestion: You can now select a project and fetch its environments using /environments?project_id={id}.</description>
       <link>https://api.tmp.computesphere.com/api/v1/projects</link>
     </item>
 
     <item>
       <title>GET /environments</title>
-      <description>Retrieve environments linked to a specific project by project_id query parameter.</description>
+      <description>Retrieve environments linked to a specific project by project_id query parameter. Suggestion: You can now view or manage services for this environment using /services?project_id={id}.</description>
       <link>https://api.tmp.computesphere.com/api/v1/environments?project_id={project_id}</link>
     </item>
 
     <item>
       <title>GET /notifications</title>
-      <description>Fetch latest notifications sent to the user. Optionally limit by size query parameter.</description>
+      <description>Fetch latest notifications sent to the user. Optionally limit by size query parameter. Suggestion: You can check /notifications/settings to customize which notifications you receive.</description>
       <link>https://api.tmp.computesphere.com/api/v1/notifications</link>
     </item>
 
     <item>
       <title>GET /notifications/settings</title>
-      <description>View notification preferences and settings. Optionally limit results by size query parameter.</description>
+      <description>View notification preferences and settings. Optionally limit results by size query parameter. Suggestion: You can update preferences using PUT /notifications/settings to enable/disable email alerts.</description>
       <link>https://api.tmp.computesphere.com/api/v1/notifications/settings</link>
     </item>
 
     <item>
       <title>PUT /notifications/settings</title>
-      <description>Update email notification preferences. Requires JSON body with email_enabled boolean and emails list.</description>
+      <description>Update email notification preferences. Requires JSON body with email_enabled boolean and emails list. Suggestion: You can verify changes by calling GET /notifications/settings again.</description>
       <link>https://api.tmp.computesphere.com/api/v1/notifications/settings</link>
     </item>
 
     <item>
       <title>GET /services</title>
-      <description>Retrieve services associated with a specified project via project_id query parameter.</description>
+      <description>Retrieve services associated with a specified project via project_id query parameter. Suggestion: You can now inspect service details or trigger relevant actions in the environment.</description>
       <link>https://api.tmp.computesphere.com/api/v1/services?project_id={project_id}</link>
     </item>
 
     <item>
       <title>GET /users/projects</title>
-      <description>Retrieve list of projects assigned to the user.</description>
+      <description>Retrieve list of projects assigned to the user. Suggestion: Select a project from the list and explore its environments using /environments?project_id={id}.</description>
       <link>https://api.tmp.computesphere.com/api/v1/users/projects</link>
     </item>
 
