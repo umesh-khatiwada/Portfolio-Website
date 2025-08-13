@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Task Manager API</title>
+    <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/</link>
+    <description>API for user authentication and task management.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Aug 2025 00:00:00 GMT</lastBuildDate>
+    <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+
+    <!-- Auth Endpoints -->
+    <item>
+      <title>Register</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/register</link>
+      <description>POST - Register a new user (name, email, password)</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Login</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/login</link>
+      <description>POST - Login with email and password</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Get Current User</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/me</link>
+      <description>GET - Retrieve the currently logged-in user (requires Bearer token)</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Logout</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/logout</link>
+      <description>POST - Logout the current user (requires Bearer token)</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+
+    <!-- Task Endpoints -->
+    <item>
+      <title>Get All Tasks</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/tasks</link>
+      <description>GET - Retrieve all tasks (supports filtering, sorting, pagination; requires authentication)</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Create Task</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/tasks</link>
+      <description>POST - Create a new task with title, description, priority, and end_date (requires authentication)</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Get Single Task</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/tasks/{id}</link>
+      <description>GET - Retrieve a single task by ID (requires authentication)</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Update Task</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/tasks/{id}</link>
+      <description>PUT - Update a task by ID (requires authentication)</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Delete Task</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/tasks/{id}</link>
+      <description>DELETE - Remove a task by ID (requires authentication)</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+
+    <!-- Health Check -->
+    <item>
+      <title>Health Check</title>
+      <link>https://task-manager-api.do.umeshkhatiwada.com.np/api/health</link>
+      <description>GET - Verify API is running and healthy</description>
+      <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+
+  </channel>
+</rss>
