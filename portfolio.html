@@ -19,7 +19,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,6 +31,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/preloader.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
   
   <!-- Add Font Awesome for tech icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,7 +42,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/profile.png" alt="Umesh Khatiwada - DevOps Professional Logo" style="width: 60px; height: 90px;">
+        <img src="assets/img/profile.png" alt="Umesh Khatiwada logo">
+        <span class="brand">umesh<b>@</b>devops</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -51,8 +53,8 @@
           <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          <li><a href="https://blog.umeshkhatiwada.com.np/article"><span>Blog</span> <i class="bi toggle-dropdown"></i></a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://blog.umeshkhatiwada.com.np/article">Blog</a></li>
+          <li><a href="contact.html" class="nav-cta">Hire me</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -69,7 +71,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>My Work</h1>
-              <p class="mb-0">As a cloud system engineer, I have extensive experience in designing, implementing, and managing cloud infrastructure and services. I am proficient in working with various cloud platforms, including Alibaba, AWS, Huawei, Azure, and GCP, and have successfully overseen the creation, deployment, and maintenance of cloud-based systems and services.</p>
+              <p class="mb-0">Platforms I have built and teams I have shipped with: cloud deployment PaaS products, multi-tenant Kubernetes tooling, AI-assisted operations, and infrastructure for SaaS, gaming, media and e-commerce companies across AWS, GCP, Azure, OVH and Linode.</p>
             </div>
           </div>
         </div>
@@ -106,9 +108,8 @@
                 <img src="assets/img/portfolio/01cloud.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>01cloud</h4>
-                  <p>01cloud is a cloud based application</p>
+                  <p>Cloud platform to deploy web apps, WordPress and cron jobs with CI/CD, plus monitoring &amp; alert microservices.</p>
                   <a href="assets/img/portfolio/01cloud.png" title="01cloud" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -117,10 +118,9 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/clustermanager.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>cluster-manager</h4>
-                  <p> cluster manager is a application to create a vcluster</p>
+                  <h4>ClusterManager</h4>
+                  <p>Go backend that provisions on-demand virtual Kubernetes clusters (vcluster) for multi-tenant teams.</p>
                   <a href="assets/img/portfolio/clustermanager.png" title="cluster-manager" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -129,10 +129,9 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/salesberry.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>salesberry Ecommerce</h4>
-                  <p>Deployment of salesberry</p>
+                  <h4>Salesberry E-commerce</h4>
+                  <p>Lead backend and containerised deployment, with Stripe, PayPal and eSewa payments.</p>
                   <a href="assets/img/portfolio/salesberry.png" title="salesberry Ecommerce" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -141,10 +140,9 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/berrybytes.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Berrybytes pvt htd</h4>
-                  <p> Software company</p>
+                  <h4>BerryBytes Pvt. Ltd</h4>
+                  <p>DevOps Engineer: AWS migration (-30% cost), Kubernetes, Terraform, n8n AI agents.</p>
                   <a href="assets/img/portfolio/berrybytes.png" title="berrybytes pvt htd" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -156,7 +154,6 @@
                   <h4>App 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
                   <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div> -->
@@ -169,7 +166,6 @@
                   <h4>Product 2</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
                   <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div>End Portfolio Item -->
@@ -178,10 +174,9 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/rpanp.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>RPA nepal</h4>
-                  <p>Gaming Company</p>
-                  <a href="assets/img/portfolio/rpanp.png" title="RPA nepal" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> 
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <h4>RPA Nepal</h4>
+                  <p>Gaming: containerised services, game-server monitoring with Datadog &amp; New Relic.</p>
+                  <a href="assets/img/portfolio/rpanp.png" title="RPA nepal" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -190,10 +185,9 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/supremeitsolution.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Supreme IT solution</h4>
-                  <p>Software Company</p>
+                  <h4>Supreme IT Solutions</h4>
+                  <p>DevOps / backend: first Kubernetes deployments, Salesberry backend lead.</p>
                   <a href="assets/img/portfolio/supremeitsolution.png" title="Supreme IT solution" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -203,9 +197,8 @@
                 <img src="assets/img/portfolio/perizer.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Perizer</h4>
-                  <p>Software Company</p>
-                  <a href="assets/img/portfolio/perizer.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  <p>Go engineer on a SaaS deployment platform: microservices, gRPC, GraphQL, Keycloak.</p>
+                  <a href="assets/img/portfolio/perizer.jpg" title="Perizer" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 </div>
               </div>
             </div>
@@ -218,7 +211,6 @@
                   <h4>Product 3</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
                   <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div>End Portfolio Item -->
@@ -228,9 +220,8 @@
                 <img src="assets/img/portfolio/intopros.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
                   <h4>Intopros Technologies</h4>
-                  <p>Gaming Company</p>
+                  <p>Gaming: Laravel/PHP/Node CI/CD on cPanel, self-hosted GitLab.</p>
                   <a href="assets/img/portfolio/intopros.png" title="intopros Technologies" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -239,10 +230,9 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/ava-technology.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
-                  <h4>Aavaa Technology</h4>
-                  <p>Software Company</p>
+                  <h4>Aavaa Technologies</h4>
+                  <p>Software developer: React, Next.js, MERN stack and WordPress e-commerce.</p>
                   <a href="assets/img/portfolio/ava-technology.png" title="Aavaa Technology" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
@@ -259,27 +249,20 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Personal</h3>
-      <p>A highly skilled IT professional with 5 years of experience delivering impactful solutions. Dedicated to continuous learning and committed to driving improvement. Proven ability to build strong internal and external relationships, fostering collaboration to achieve critical objectives. Thrives in fast-paced environments, leveraging expertise in DevOps, Cloud Computing, Security, Scripting, and Server/OS Administration to support team success and enhance overall performance.</p>
+      <h3 class="sitename">umesh@devops</h3>
+      <p>DevOps, Kubernetes &amp; Golang engineer with 4+ years building cloud platforms, CI/CD pipelines, observability stacks and AI-agent automation. Based in Kathmandu, working with teams worldwide.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://x.com/The_khatiwada">
-          <i class="bi bi-twitter-x"></i>
-        </a>
-        <a href="https://www.instagram.com/umesh__khatiwada/">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://join.skype.com/invite/u9o9zpFsPsNU">
-          <i class="bi bi-skype"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/umesh-khatiwada/">
-          <i class="bi bi-linkedin"></i>
-        </a>
+        <a href="https://github.com/umesh-khatiwada" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/umesh-khatiwada/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://medium.com/@contact.khatiwada" aria-label="Medium"><i class="bi bi-medium"></i></a>
+        <a href="https://x.com/The_khatiwada" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/umesh__khatiwada/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
       </div>
       
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright © 2024</span> <strong class="px-1 sitename">Umesh khatiwada </strong> <span>All Rights Reserved</span>
+          <span>Copyright © 2026</span> <strong class="px-1 sitename">Umesh Khatiwada</strong> <span>All Rights Reserved</span>
         </div>
       </div>
     </div>

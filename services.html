@@ -19,7 +19,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -31,6 +31,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/preloader.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
   
   <!-- Add Font Awesome for tech icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -42,7 +43,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/profile.png" alt="Umesh Khatiwada - DevOps Professional Logo" style="width: 60px; height: 90px;">
+        <img src="assets/img/profile.png" alt="Umesh Khatiwada logo">
+        <span class="brand">umesh<b>@</b>devops</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -52,8 +54,8 @@
           <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html" class="active">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="https://blog.umeshkhatiwada.com.np/article"><span>Blog</span> <i class="bi toggle-dropdown"></i></a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://blog.umeshkhatiwada.com.np/article">Blog</a></li>
+          <li><a href="contact.html" class="nav-cta">Hire me</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -70,7 +72,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>My Services</h1>
-              <p class="mb-0">I provide services of cloud computing and  I carry out duties like software configuration, performance monitoring, technical problem-solving & system security maintenance. I also help user to backup, restore data, migrate, deploy , and offer technical support to end users. Depending on the requirements of the organization, I typically work on a flexible schedule, either remotely or physically on-site. To make sure the system is reliable, dependable, and secure, I also stay current on emerging technologies and market trends.</p>
+              <p class="mb-0">From a first Dockerfile to a multi-tenant Kubernetes platform with AI-assisted on-call, I help teams ship faster, spend less on cloud and sleep through the night. Available remote, full-time or freelance.</p>
             </div>
           </div>
         </div>
@@ -91,112 +93,122 @@
       <div class="container">
 
         <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-diagram-3"></i></div>
+              <h3>Kubernetes Platform Engineering</h3>
+              <p>Production clusters on EKS/GKE/AKS or bare metal, multi-tenant vclusters, custom Helm charts, operators and network policies.</p>
+              <div class="chips"><span class="chip">Kubernetes</span><span class="chip">Helm</span><span class="chip">vcluster</span><span class="chip">Cilium</span></div>
+            </div>
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-cloud"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Cloud Architecture and Design</h3>
-              </a>
-              <p>Designing and implementing scalable, highly available cloud solutions.</p>
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-arrow-repeat"></i></div>
+              <h3>CI/CD &amp; GitOps</h3>
+              <p>Pipelines that take releases from monthly to weekly or daily, with preview environments and automated rollbacks.</p>
+              <div class="chips"><span class="chip">ArgoCD</span><span class="chip">Tekton</span><span class="chip">GitHub Actions</span><span class="chip">Jenkins</span></div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-shield-lock"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Backup and Recovery</h3>
-              </a>
-              <p>Automating Backup & Failover & Restoration Services.</p>
+              <div class="icon"><i class="bi bi-robot"></i></div>
+              <h3>AI Agent Automation</h3>
+              <p>n8n + LLM agents that triage alerts, summarise incidents, scan for vulnerabilities and propose fixes to your on-call team.</p>
+              <div class="chips"><span class="chip">n8n</span><span class="chip">LLM agents</span><span class="chip">ChatOps</span></div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-cloud-arrow-up"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>AWS Cloud</h3>
-              </a>
-              <p>ECS, RDS, OSS, SLB, VPC, Auto Scaling, Direct Mail, API Gateway.</p>
+              <div class="icon"><i class="bi bi-cloud-upload"></i></div>
+              <h3>Cloud Architecture &amp; Migration</h3>
+              <p>Lift-and-improve migrations to AWS, GCP or Azure, sized for cost (a recent on-prem to AWS move cut spend by 30%).</p>
+              <div class="chips"><span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">Azure</span></div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-layers"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>IaaS, PaaS, SaaS</h3>
-              </a>
-              <p>Comfortable with AWS, Alibaba, GCP, Huawei Cloud Services.</p>
-              <a href="service-details.html" class="stretched-link"></a>
+              <div class="icon"><i class="bi bi-bricks"></i></div>
+              <h3>Infrastructure as Code</h3>
+              <p>Reproducible environments with Terraform and Terragrunt modules, so a new environment takes hours, not days.</p>
+              <div class="chips"><span class="chip">Terraform</span><span class="chip">Terragrunt</span><span class="chip">Ansible</span></div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-cloud-upload"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Cloud Migration</h3>
-              </a>
-              <p>Moving existing applications and workloads to the cloud..</p>
-              <a href="service-details.html" class="stretched-link"></a>
+              <div class="icon"><i class="bi bi-activity"></i></div>
+              <h3>Observability &amp; SRE</h3>
+              <p>Metrics, logs and traces with alerting that means something: multi-tenant Prometheus via Cortex, Loki and OpenTelemetry.</p>
+              <div class="chips"><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">Cortex</span><span class="chip">Loki</span></div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-server"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Server Admintrator</h3>
-              </a>
-              <p>Physical Server, Virtual Servers and Setup Services.</p>
-              <a href="service-details.html" class="stretched-link"></a>
+              <div class="icon"><i class="bi bi-code-square"></i></div>
+              <h3>Go Backend &amp; APIs</h3>
+              <p>Clean-architecture Go microservices with REST, gRPC, GraphQL and WebSockets, plus API gateways like KrakenD and Kong.</p>
+              <div class="chips"><span class="chip">Go</span><span class="chip">gRPC</span><span class="chip">KrakenD</span></div>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-shield-lock"></i></div>
+              <h3>DevSecOps &amp; Identity</h3>
+              <p>Image and code scanning in the pipeline, secrets management, and SSO with Keycloak or Auth0.</p>
+              <div class="chips"><span class="chip">Trivy</span><span class="chip">SonarQube</span><span class="chip">Keycloak</span></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-hdd-stack"></i></div>
+              <h3>Backup &amp; Disaster Recovery</h3>
+              <p>Automated cluster and volume backups with tested restores and failover runbooks.</p>
+              <div class="chips"><span class="chip">Velero</span><span class="chip">Kasten</span><span class="chip">Postgres Operator</span></div>
+            </div>
+          </div>
         </div>
 
       </div>
 
     </section><!-- /Services Section -->
+    <section>
+      <div class="container" data-aos="fade-up">
+        <div class="glass uk-cta">
+          <h2>Have a platform problem?</h2>
+          <p>Tell me what's slow, expensive or keeping you up at night. I'll reply with a concrete plan.</p>
+          <div class="cta">
+            <a href="contact.html" class="btn-grad"><i class="bi bi-chat-dots"></i> Start a conversation</a>
+            <a href="assets/file/cv.pdf" class="btn-ghost" download><i class="bi bi-download"></i> Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Personal</h3>
-      <p>A highly skilled IT professional with 5 years of experience delivering impactful solutions. Dedicated to continuous learning and committed to driving improvement. Proven ability to build strong internal and external relationships, fostering collaboration to achieve critical objectives. Thrives in fast-paced environments, leveraging expertise in DevOps, Cloud Computing, Security, Scripting, and Server/OS Administration to support team success and enhance overall performance.</p>
+      <h3 class="sitename">umesh@devops</h3>
+      <p>DevOps, Kubernetes &amp; Golang engineer with 4+ years building cloud platforms, CI/CD pipelines, observability stacks and AI-agent automation. Based in Kathmandu, working with teams worldwide.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://x.com/The_khatiwada">
-          <i class="bi bi-twitter-x"></i>
-        </a>
-        <a href="https://www.instagram.com/umesh__khatiwada/">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://join.skype.com/invite/u9o9zpFsPsNU">
-          <i class="bi bi-skype"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/umesh-khatiwada/">
-          <i class="bi bi-linkedin"></i>
-        </a>
+        <a href="https://github.com/umesh-khatiwada" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/umesh-khatiwada/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://medium.com/@contact.khatiwada" aria-label="Medium"><i class="bi bi-medium"></i></a>
+        <a href="https://x.com/The_khatiwada" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/umesh__khatiwada/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
       </div>
       
       <div class="container">
         <div class="copyright">
-          <span>Copyright © 2024</span> <strong class="px-1 sitename">Umesh khatiwada </strong> <span>All Rights Reserved</span>
+          <span>Copyright © 2026</span> <strong class="px-1 sitename">Umesh Khatiwada</strong> <span>All Rights Reserved</span>
         </div>
       </div>
     </div>

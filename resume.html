@@ -32,7 +32,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,6 +44,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/preloader.css" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
   
   <!-- Add Font Awesome for tech icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -55,7 +56,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/profile.png" alt="Umesh Khatiwada - DevOps Professional Logo" style="width: 60px; height: 90px;">
+        <img src="assets/img/profile.png" alt="Umesh Khatiwada logo">
+        <span class="brand">umesh<b>@</b>devops</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -65,8 +67,8 @@
           <li><a href="resume.html" class="active">Resume</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="https://blog.umeshkhatiwada.com.np/article"><span>Blog</span> <i class="bi toggle-dropdown"></i></a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://blog.umeshkhatiwada.com.np/article">Blog</a></li>
+          <li><a href="contact.html" class="nav-cta">Hire me</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -83,7 +85,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Resume</h1>
-              <p class="mb-0">Exceptional worker with over three and a half years of experience in the IT sector, producing high-impact projects. Devoted to lifelong learning and prepared to go above and beyond to support ongoing development. Adept at building connections both inside and outside the company to enable the cooperative accomplishment of high-priority objectives. Self-assured in the ability to perform well in a fast-paced environment and use DevOps, Cloud Computing & Security, Scripting, Server, and OS Administration skills to support the success of the team.</p>
+              <p class="mb-0">DevOps, Kubernetes and Golang engineer with 4+ years implementing CI/CD pipelines, cloud infrastructure, observability and automation, including AI-agent workflows for site reliability and DevSecOps.</p>
             </div>
           </div>
         </div>
@@ -101,118 +103,129 @@
     <!-- Resume Section -->
     <section id="resume" class="resume section">
       <div class="container">
-        <div class="row">
+        <div class="row g-5">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Umesh Khatiwada</h4>
-              <p><em>Exceptional worker with over three and a half years of experience in the IT sector, producing high-impact projects. Devoted to lifelong learning and prepared to go above and beyond to support ongoing development.</em></p>
-              <ul>
-                <li>Hetauda-16, Nepal</li>
-                <li>(977) 984XXX-X4055</li>
-                <li><a href="mailto:contact.khatiwada@gmail.com">contact.khatiwada@gmail.com</a></li>
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="glass p-4 mb-4">
+              <h3 class="resume-title mb-3">Summary</h3>
+              <h4 style="font-size:20px">Umesh Khatiwada</h4>
+              <p style="color:var(--muted)">Software / DevOps / Kubernetes Engineer</p>
+              <ul class="list-unstyled" style="color:var(--text);line-height:2">
+                <li><i class="bi bi-geo-alt" style="color:var(--cyan)"></i> Kathmandu, Nepal</li>
+                <li><i class="bi bi-envelope" style="color:var(--cyan)"></i> <a href="mailto:contact.khatiwada@gmail.com">contact.khatiwada@gmail.com</a></li>
+                <li><i class="bi bi-github" style="color:var(--cyan)"></i> <a href="https://github.com/umesh-khatiwada" target="_blank" rel="noopener">umesh-khatiwada</a></li>
+                <li><i class="bi bi-medium" style="color:var(--cyan)"></i> <a href="https://medium.com/@contact.khatiwada" target="_blank" rel="noopener">@contact.khatiwada</a></li>
               </ul>
-            </div><!-- End Resume Item -->
+              <a href="assets/file/cv.pdf" class="btn-grad mt-2" download><i class="bi bi-download"></i> Download CV</a>
+            </div>
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Computer Science</h4>
-              <h5>2024 - Present</h5>
-              <p><em>Tribhuwan University, Kathmandu, Nepal</em></p>
-              <p>Currently pursuing a Master of Computer Science.</p>
-            </div><!-- End Resume Item -->
+            <div class="glass p-4 mb-4">
+              <h3 class="resume-title mb-3">Education</h3>
+              <h4 style="font-size:17px">Master of Computer Science</h4>
+              <p class="mono" style="color:var(--cyan);font-size:13px;margin:0">2024 — Present</p>
+              <p style="color:var(--muted)">Tribhuvan University</p>
+              <h4 style="font-size:17px">B.Sc. Computer Science</h4>
+              <p class="mono" style="color:var(--cyan);font-size:13px;margin:0">Graduated 2021</p>
+              <p style="color:var(--muted);margin:0">Tribhuvan University</p>
+            </div>
 
-            <div class="resume-item">
-              <h4>Bachelor of Computer Science & Technology</h4>
-              <h5>2016 - 2020</h5>
-              <p><em>Tribhuwan University, Kathmandu, Nepal</em></p>
-              <p>Completed Bachelor in Computer Science & Technology from Tribhuwan University.</p>
-            </div><!-- End Resume Item -->
-
+            <div class="glass p-4">
+              <h3 class="resume-title mb-3">Certifications</h3>
+              <p style="color:var(--text);margin-bottom:8px"><i class="bi bi-patch-check" style="color:var(--green)"></i> KodeKloud — AWS</p>
+              <p style="color:var(--text);margin:0"><i class="bi bi-patch-check" style="color:var(--green)"></i> KodeKloud — Advanced Golang</p>
+            </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Mid-Level DevOps Engineer</h4>
-              <h5>2022 - Present</h5>
-              <p><em>Berrybytes Pvt Ltd, Kathmandu, Nepal</em></p>
-              <ul>
-                <li>Working as a Mid-Level DevOps Engineer</li>
-                <li>Experience with AWS, GCP, Azure, and DevOps practices</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>Software Developer & DevOps Engineer</h4>
-              <h5>2021 - 2022</h5>
-              <p><em>Supreme IT Solution, Kathmandu, Nepal</em></p>
-              <ul>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Technologies used: Node.js, React.js, Python, JavaScript, HTML, CSS</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>Software Developer Intern</h4>
-              <h5>2020 - 2021</h5>
-              <p><em>Avaa Technologies, Hetauda, Nepal</em></p>
-              <ul>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
+          <div class="col-lg-8">
+            <h3 class="resume-title mb-4" data-aos="fade-up">Professional Experience</h3>
+            <div class="uk-timeline">
+              <div class="glass uk-tl-item now" data-aos="fade-up">
+                <div class="when">Jun 2024 — Present</div>
+                <h3>Software Engineer (Golang)</h3>
+                <div class="org">Perizer · US-based, remote</div>
+                <ul>
+                  <li>Designed and built a <b>microservices architecture</b> for a SaaS deployment platform with built-in CI/CD and Git integration.</li>
+                  <li>High-performance Go services exposing <b>REST, gRPC and GraphQL</b>; real-time features over WebSocket.</li>
+                  <li>Integrated authentication and authorization with <b>Auth0 and Keycloak</b>.</li>
+                  <li>Followed Clean Code / Clean Architecture; unit and integration tests; active in code reviews and design.</li>
+                  <li>Implemented monitoring, logging and alerting for production systems.</li>
+                </ul>
+                <span class="chip">Go</span><span class="chip">gRPC</span><span class="chip">GraphQL</span><span class="chip">WebSocket</span><span class="chip">Keycloak</span>
+              </div>
+              <div class="glass uk-tl-item now" data-aos="fade-up">
+                <div class="when">Jun 2023 — Present</div>
+                <h3>DevOps Engineer</h3>
+                <div class="org">BerryBytes Pvt. Ltd · Kathmandu</div>
+                <ul>
+                  <li>Led migration from on-prem to <b>AWS, reducing operating costs by 30%</b>.</li>
+                  <li>Adopted Kubernetes for orchestration, <b>cutting deployment time by 50%</b>.</li>
+                  <li>Jenkins CI/CD pipelines took releases from <b>monthly to weekly</b>.</li>
+                  <li>Terraform provisioning made new environments <b>70% faster</b> to set up.</li>
+                  <li>Serverless video pipeline (Lambda, Step Functions, MediaConvert) for adaptive-bitrate streaming.</li>
+                  <li><b>DevSecOps with AI agents in n8n</b>: workflows monitor K8s clusters and notify system engineers with proposed solutions.</li>
+                </ul>
+                <span class="chip">AWS</span><span class="chip">Kubernetes</span><span class="chip">Terraform</span><span class="chip">Jenkins</span><span class="chip hot">n8n AI agents</span>
+              </div>
+              <div class="glass uk-tl-item" data-aos="fade-up">
+                <div class="when">Jan 2023 — Jun 2023</div>
+                <h3>DevOps Engineer</h3>
+                <div class="org">RPA Nepal · remote</div>
+                <ul>
+                  <li>Containerised applications with Docker for consistent dev and prod environments.</li>
+                  <li>Monitored game servers for a smooth player experience using Datadog and New Relic.</li>
+                  <li>CI/CD with GitHub Actions and GitLab CI.</li>
+                </ul>
+              </div>
+              <div class="glass uk-tl-item" data-aos="fade-up">
+                <div class="when">Feb 2022 — Jan 2023</div>
+                <h3>DevOps Engineer</h3>
+                <div class="org">Intopros Technology · remote</div>
+                <ul>
+                  <li>Deployed Laravel, PHP and Node apps on cPanel with CI/CD workflows.</li>
+                  <li>Self-hosted GitLab on a VPS for source control.</li>
+                </ul>
+              </div>
+              <div class="glass uk-tl-item" data-aos="fade-up">
+                <div class="when">Feb 2022 — Jun 2023</div>
+                <h3>DevOps / Software Engineer</h3>
+                <div class="org">Supreme IT Solutions Pvt. Ltd</div>
+                <ul>
+                  <li>Lead backend developer for the Salesberry e-commerce site.</li>
+                  <li>First Kubernetes deployments; worked with dev teams on deployment best practices.</li>
+                </ul>
+              </div>
+              <div class="glass uk-tl-item" data-aos="fade-up">
+                <div class="when">Apr 2021 — Jul 2021</div>
+                <h3>Software Developer</h3>
+                <div class="org">Aavaa Technologies Pvt. Ltd</div>
+                <ul>
+                  <li>Front end with React and Next.js; MERN stack projects; WordPress e-commerce.</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
         </div>
       </div>
     </section><!-- End Resume Section -->
- 
-    <!-- download my cv hyperlink -->
-    <div class="container">
-      <div class="row" data-aos="fade-up">
-        <div class="col-lg-12">
-          <div class="section-title">
-            <h2>Download My CV</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row" data-aos="fade-up">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <a href="assets/file/cv.pdf" class="download-cv-btn" download>Download CV</a>
-        </div>
-      </div>
-    </div>
-     
-    <br>
 
 
   </main>
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Personal</h3>
-      <p>A highly skilled IT professional with 5 years of experience delivering impactful solutions. Dedicated to continuous learning and committed to driving improvement. Proven ability to build strong internal and external relationships, fostering collaboration to achieve critical objectives. Thrives in fast-paced environments, leveraging expertise in DevOps, Cloud Computing, Security, Scripting, and Server/OS Administration to support team success and enhance overall performance.</p>
+      <h3 class="sitename">umesh@devops</h3>
+      <p>DevOps, Kubernetes &amp; Golang engineer with 4+ years building cloud platforms, CI/CD pipelines, observability stacks and AI-agent automation. Based in Kathmandu, working with teams worldwide.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://x.com/The_khatiwada" class="twitter" aria-label="Twitter">
-          <i class="bi bi-twitter"></i>
-        </a>
-        <a href="https://www.instagram.com/umesh__khatiwada/" class="instagram" aria-label="Instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
-        <a href="https://join.skype.com/invite/u9o9zpFsPsNU" class="skype" aria-label="Skype">
-          <i class="bi bi-skype"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/umesh-khatiwada/" class="linkedin" aria-label="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
+        <a href="https://github.com/umesh-khatiwada" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/umesh-khatiwada/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://medium.com/@contact.khatiwada" aria-label="Medium"><i class="bi bi-medium"></i></a>
+        <a href="https://x.com/The_khatiwada" aria-label="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.instagram.com/umesh__khatiwada/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
-          <span>Copyright © 2024</span> <strong class="px-1 sitename">Umesh Khatiwada</strong> <span>All Rights Reserved</span>
+          <span>Copyright © 2026</span> <strong class="px-1 sitename">Umesh Khatiwada</strong> <span>All Rights Reserved</span>
         </div>
       </div>
     </div>

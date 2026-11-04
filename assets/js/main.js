@@ -107,6 +107,7 @@
    * Animation on scroll function and init
    */
   function aosInit() {
+    if (typeof AOS === 'undefined') return;
     AOS.init({
       duration: 600,
       easing: 'ease-in-out',
@@ -120,7 +121,7 @@
    * Init typed.js
    */
   const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
+  if (selectTyped && typeof Typed !== 'undefined') {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
     typed_strings = typed_strings.split(',');
     new Typed('.typed', {
@@ -135,13 +136,13 @@
   /**
    * Initiate Pure Counter
    */
-  new PureCounter();
+  if (typeof PureCounter !== 'undefined') new PureCounter();
 
   /**
    * Animate the skills items on reveal
    */
   let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
+  if (typeof Waypoint !== 'undefined') skillsAnimation.forEach((item) => {
     new Waypoint({
       element: item,
       offset: '80%',
@@ -158,6 +159,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
+    if (typeof Swiper === 'undefined') return;
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
@@ -176,7 +178,7 @@
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
+  if (typeof GLightbox !== 'undefined') GLightbox({
     selector: '.glightbox'
   });
 
